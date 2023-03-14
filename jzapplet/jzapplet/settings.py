@@ -25,21 +25,27 @@ SECRET_KEY = 'django-insecure-qnb=7(99hxiy(nktyye8+!9zy+f%ktd*-1s60ot$w^0p3%=$ol
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    # 'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'jzapplet',
     'order',
+    'rest_framework',
+    # 'django.contrib.sites',
+    # 'django.contrib.flatpages',
+    # 'django.contrib.sessions',
 ]
-
+# SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -50,7 +56,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'rest_framework',
 ]
 
 REST_FRAMEWORK = {
